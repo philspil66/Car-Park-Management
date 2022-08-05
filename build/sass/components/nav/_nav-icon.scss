@@ -1,0 +1,56 @@
+/* 
+	
+	components/nav/_nav-icon.scss 
+
+*/
+
+.navicon {
+
+	position: absolute; 
+	top: 0px;
+	right: 12px;
+
+	a {
+		display: inline-block;
+		color: lighten($dark-grey,50%);
+		text-decoration: none;
+		font-size: 2em;
+	}
+
+	@media only screen and (min-width : 1024px){
+		display: none;
+	}
+
+}
+
+.account-icon {
+
+	position: absolute;
+	top: 2px;
+	right: 55px;
+
+	a {
+		margin-top: 2px;
+		font-size: 1.5em;
+		color: $mid-grey;
+		text-decoration: none;
+	}
+
+	@media only screen and (min-width : 1024px){
+		display: none;
+	}
+
+}
+
+@media #{$mobile-small}{
+
+	.navicon {
+		top: 8px;
+	}
+
+	.account-icon {
+		top: 11px;
+	}
+
+}
+

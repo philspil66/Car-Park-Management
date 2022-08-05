@@ -1,0 +1,85 @@
+/*******************************************************************************
+ *
+ * 	2016-06-23 ScottT
+ *
+ * 	Front end for entry check app
+ *
+ * 	URL: 	/entry-check-app
+ * 	JSON: 	/get-webapp-data
+ *
+ ******************************************************************************/
+
+- CSS and JS are generated using gulp js tasks ( http://gulpjs.com/ )
+- SASS is used as a preprocessor for CSS
+- CommonJS pattern is used to modularise the JS
+- SASS / JS is bundled via gulp tasks and output to these files:
+
+	/public/css/entry-check-app.css
+	/public/js/entry-check-app.js
+
+Initial Setup
+------------------------------------------------------------------------------
+
+	1) 	From the /build-entry-check-app directory run the following commands to 
+		install node modules and bower components: 
+
+	 	npm install
+	 	bower install
+
+
+Generate CSS
+------------------------------------------------------------------------------
+
+	1) 	From the /build-entry-check-app directory run the following command to 
+	   	generate the CSS from SCSS files:
+
+		gulp sass
+
+	*	CSS can be minified even further for production by running the command
+		above with the production flag set (this will remove sourcemaps from css):
+
+		gulp sass --production
+
+
+Generate JS
+------------------------------------------------------------------------------
+
+	1) 	From the /build-entry-check-app directory run the following command to 
+		generate the js file
+
+		gulp scripts
+
+
+Gulp Watch
+------------------------------------------------------------------------------		
+
+	Both 'gulp sass' and the 'gulp scripts' commands can be run automatically 
+	when the js/scss files within the /build-entry-check-app folder are changed
+	using the command below, to save running the commands manually each time 
+	you make a change:
+
+		gulp watch
+
+
+Making commits
+------------------------------------------------------------------------------
+
+	When making changes to the css and javascript, remember to checkin both
+	the build files and the bundled files, e.g:
+
+	/build-entry-check-app/js/*.js
+	/build-entry-check-app/sass/*.scss
+
+	/public/css/entry-check-app.css
+	/public/js/entry-check-app.js
+
+
+
+
+
+
+
+
+
+
+

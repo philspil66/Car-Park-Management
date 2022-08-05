@@ -1,0 +1,79 @@
+
+/* 
+	
+	components/checkout/_checkout--progress.scss 
+
+*/
+
+.checkout--progress {
+	margin-top: 2em;
+
+	.checkout--progress__bars {
+		@include clearfix;
+
+		margin-bottom: 1.25em;
+		position: relative;
+
+		.checkout--progress__bar {
+			float: left;
+			width: 50%;
+			background: $mid-grey;
+			height: 2px;
+
+			&.active {
+				background: $orange;
+			}
+		}
+
+		.checkout--progress__step {
+			position: absolute;
+			top: -11px;
+			width: 20px;
+			height: 20px;
+			background: $light-grey;
+			border: 2px solid $mid-grey;
+			color: $mid-grey;
+			text-align: center;
+			border-radius: 20px;
+			font-size: 0.875em;
+
+			&.step2 {
+				@include calc(left, "50% - 12px");
+			}
+
+			&.step3 {
+				right: 0;
+			}
+
+			&.active {
+				border: 2px solid $orange;
+			}
+		}
+	}
+
+	.checkout--progress__text {
+		@include clearfix;
+		margin-bottom: 1.25em;
+
+		div {
+			float: left;
+			width: 33.33333333333333%;
+			font-size: 0.75em;
+			color: $mid-grey;
+
+			&.active {
+				color: $orange;
+				font-weight: 700;
+			}
+		}
+
+		.checkout--progress__text--center {
+			text-align: center;
+		}
+
+		.checkout--progress__text--right {
+			text-align: right;
+		}
+	}
+
+}

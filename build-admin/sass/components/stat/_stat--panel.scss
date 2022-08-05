@@ -1,0 +1,57 @@
+/* 
+	
+	components/stat/_stat--panel.scss
+
+*/
+
+.stats--panel {
+	@include clearfix;
+	border-bottom: 1px solid $brand3;
+	position: relative;
+
+	.stats--panel__left {
+		float: left;
+		width: 25%;
+	}
+
+	.stats--panel__right {
+		float: left;
+		width: 75%;
+		border-left: 1px solid $brand3;
+	}
+
+}
+
+.stats--table {
+	width: 100%;
+
+	tr {
+		border-bottom: 1px solid $brand3;
+	}
+
+	td {
+		border-right: 1px solid $brand3;
+		text-align: center;
+		padding: 2em 0.25em;
+		vertical-align: middle;
+
+		&:last-child {
+			border-right: none;
+		}
+
+		&.column33 {
+			width: 33.33333333333333%;
+		}
+
+		&.column25 {
+			width: 25%;
+		}
+	}
+
+}
+
+.stats--table + .stats--table {
+	tr {
+		border-bottom: none;
+	}
+}

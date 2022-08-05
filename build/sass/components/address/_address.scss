@@ -1,0 +1,28 @@
+/* 
+	
+	components/address/_address.scss 
+
+*/
+
+.address {
+	position: relative;
+	margin-bottom: 1.25em;
+	padding: 1.25em;
+	border: 1px dotted $orange;
+
+	h3 {
+		margin-top: 0;
+	}
+
+	p {
+		margin: 0 0 0 0;
+	}
+
+	.button {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		margin-right: 0;
+	}
+
+}

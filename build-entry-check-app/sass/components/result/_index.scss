@@ -1,0 +1,87 @@
+/* 
+	
+	components/result/_index.scss
+
+*/
+
+.result--basic {
+
+	margin: 0 1em;
+	background: $brand5;
+	border-bottom: 1px solid $brand4;
+
+	.result--basic__column {
+		float: left;
+		width: 50%;
+		padding: 0.5em;
+		box-sizing: border-box;
+		color: $brand2;
+		text-align: center;
+		font-size: 0.875em;
+
+		&.plate {
+			background: $yellow;
+			font-weight: bold;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 1em;
+	}
+
+}
+
+.result--advanced {
+	margin: 0 1em 1em;
+	background: $brand5;
+
+	.result--advanced__plate {
+		background: $yellow;
+		font-size: 1em; 
+		font-weight: bold;
+		text-align: center;
+		padding: 1em;
+		border: 1px solid darken($yellow,20%);
+	}
+
+	.result--advanced__detail {
+		border-bottom: 1px solid $brand4;
+
+		.result--advanced__detail__left {
+			float: left;
+			width: 40%;
+			font-size: 0.75em;
+			font-weight: bold;
+			padding: 1em;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			border-right: 1px solid $brand4;
+		}
+
+		.result--advanced__detail__right {
+			float: left;
+			width: 60%;
+			font-size: 0.75em;
+			padding: 1em;
+			box-sizing: border-box;
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

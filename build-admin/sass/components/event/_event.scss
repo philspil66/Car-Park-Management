@@ -1,0 +1,138 @@
+/* 
+	
+	components/event/_event.scss 
+
+*/
+
+.event {
+
+	@include clearfix;
+	margin-bottom: 1.25em;
+	background: $brand5;
+	border: 1px solid $brand3;
+
+	.event__inner {
+		padding: 1.25em 1.25em 1.25em 4em;
+		position: relative;
+	}
+
+	.event__title {
+		font-size: 0.875em;
+		margin-bottom: 0.5em;
+		display: inline-block;
+	}
+
+	h2 {
+		margin: 0;
+		color: $brand1;
+		font-size: 1em;
+		padding: 0 0 0 0;
+	}
+
+	p {
+		font-size: 0.75em;
+		margin: 0;
+		padding: 0;
+	}
+
+	.dropdown--wrapper {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	.event__flag {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		text-align: center;
+		border-style: solid;
+		border-width: 70px 70px 0 0;
+		border-color: $brand3 transparent transparent transparent;
+	}
+
+	.event__icon {
+		position: absolute;
+		top: 8px;
+		left: 8px; 
+		width: 25px;
+		height: 25px;
+		background: url(../images/icons/ticket-icon.svg) no-repeat right top;
+
+		&.football {
+			background: url(../images/icons/football-icon.svg) no-repeat right top;
+		}
+
+		&.rugby {
+			background: url(../images/icons/rugby-icon.svg) no-repeat right top;
+		}
+
+		&.music {
+			left: 4px;
+			background: url(../images/icons/music-icon.svg) no-repeat right top;
+		}
+
+		&.snooker {
+			left: 6px;
+			background: url(../images/icons/snooker-icon.svg) no-repeat right top;
+		}
+	}
+
+	.event__progress {
+		@include clearfix;
+		background: darken($brand4,10%);
+		border-top: 1px solid $brand3;
+		height: 5px;
+		position: relative;
+
+		.event__progress__scale {
+			float: left;
+			width: 20%;
+			height: 4px;
+			text-align: right;
+			font-size: 0;
+			border-right: 1px solid $brand3;
+		}
+
+		.event__progress__bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 5px;
+			background: $status_green;
+
+			&.amber {
+				background: $status_amber;
+			}
+
+			&.red {
+				background: $status_red;
+			}
+
+		}
+	}
+
+	.event__status {
+		display: none;
+		background: lighten($yellow,20%);
+		color: darken($yellow,30%);
+		padding: 1em;
+		font-size: 0.75em;
+
+		i {
+			font-size: 1rem;
+			vertical-align: middle;
+		}
+	}
+
+	&.inactive { 
+
+		.event__status {
+			display: block;
+		}
+
+	}
+
+}

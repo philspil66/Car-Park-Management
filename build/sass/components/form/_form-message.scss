@@ -1,0 +1,34 @@
+/* 
+	
+	components/form/_form-message.scss 
+
+*/
+
+.form-message {
+
+	background: lighten($error-msg,50%);
+	padding: 1.25em;
+	margin: 0 0 1.5em;
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin: 0;
+			color: $error-msg;
+		}
+	}
+
+}
+
+.form-message-success {
+
+	background: lighten($success-msg, 50%);
+
+	ul li {
+		color: $success-msg;
+	}
+
+}

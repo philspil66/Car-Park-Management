@@ -1,0 +1,29 @@
+/* 
+	
+	components/msg/_msg.scss 
+
+*/
+
+.msg {
+
+	background: lighten($plate-bg,20%); 
+
+	.msg--inner {
+		padding: 1.25em;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin-bottom: 0.75em;
+		}
+	}
+
+}

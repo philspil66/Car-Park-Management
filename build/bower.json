@@ -1,0 +1,28 @@
+{
+  "name": "ricoh-parking-website",
+  "description": "Ricoh Parking Website",
+  "main": "index.js",
+  "authors": [
+    "Scott Turner"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "^3.0.3",
+    "susy": "https://github.com/oddbird/susy.git#^2.2.12",
+    "bourbon": "https://github.com/thoughtbot/bourbon.git#^4.2.6",
+    "bootstrap-sass": "^3.3.6",
+    "jquery-validation": "^1.14.0",
+    "js-cookie": "^2.1.0",
+    "modernizr-min": "^3.2.0"
+  }
+}

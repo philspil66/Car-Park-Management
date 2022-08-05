@@ -1,0 +1,27 @@
+/* 
+	
+	components/actions/_index.scss
+
+*/
+
+.actions {
+
+	a {
+		float: left;
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		background: $brand1;
+		color: $brand5;
+		padding: 1.5em;
+		font-size: 0.75em;
+		box-sizing: border-box;
+		text-decoration: none;
+
+		&:hover {
+			background: $brand2;
+			color: $brand5;
+			text-decoration: none;
+		}
+	}
+}

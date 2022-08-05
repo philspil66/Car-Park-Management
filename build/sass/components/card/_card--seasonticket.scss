@@ -1,0 +1,26 @@
+/* 
+	
+	components/card/_card--seasonticket.scss 
+
+*/
+
+.card--seasonticket {
+
+	position: relative;
+	padding-bottom: 1.25em;
+
+	h2 {
+		margin: 0; 
+	}
+
+	.card--seasonticket__button {
+		text-align: right;
+
+		.button {
+			margin-right: 0;
+			margin-bottom: 0; 
+		}
+
+	}
+
+}

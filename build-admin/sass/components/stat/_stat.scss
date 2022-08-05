@@ -1,0 +1,61 @@
+/* 
+	
+	components/stat/_stat.scss
+
+*/
+
+.stat {
+
+	background: $brand5;
+	/* padding: 1em; */
+	text-align: center;
+
+	.stat__title {
+		margin: 0;
+		color: $brand2;
+		text-transform: uppercase;
+		font-size: 0.75em;
+		font-weight: 700;
+	}
+
+	.stat__info {
+		display: inline-block;
+	}
+
+	.stat__number {
+		font-size: 2em;
+		font-weight: 800; 
+		color: $brand1;
+		margin: 0 0 0.25em;
+		padding: 0;
+		line-height: 1em;
+
+		span {
+			display: inline-block;
+		}
+
+		span.stat__separator {
+			color: $brand1;
+			font-weight: 400;
+		}
+
+		span.first {
+			color: $brand3;
+		}
+	}
+
+	.stat__description {
+		margin: 0;
+		color: $brand2;
+		font-size: 0.75em;
+	}
+
+}
+
+.stat-large {
+
+	.stat__number {
+		font-size: 3.5em; 
+	}
+
+}

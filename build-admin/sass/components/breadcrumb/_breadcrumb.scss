@@ -1,0 +1,26 @@
+/* 
+	
+	components/breadcrumb/_breadcrumb.scss
+
+*/
+
+.breadcrumb {
+
+	color: $brand3;
+	padding: 1em 1.5em;
+	border-bottom: 1px solid darken($brand4,10%);
+
+	a {
+		font-size: 0.75em;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+
+	p {
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 0.75em;
+		margin: 0;
+	}
+
+}

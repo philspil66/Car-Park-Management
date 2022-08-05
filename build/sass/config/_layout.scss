@@ -1,0 +1,72 @@
+/* 
+	
+	config/_layout.scss 
+
+*/
+
+// default device breakpoints
+$mobile-small-breakpoint : 400px;
+$mobile-breakpoint : 600px;
+$tablet-breakpoint : 1024px;
+$desktop-breakpoint: 1260px;
+$desktop-wide-breakpoint : 2000px;
+
+$mobile-small : "only screen and (max-width : #{$mobile-small-breakpoint})"; 
+$mobile : "only screen and (max-width : #{$mobile-breakpoint})"; 
+$tablet : "only screen and (max-width : #{$tablet-breakpoint})";
+$desktop : "only screen and (max-width : #{$desktop-breakpoint})";
+
+// site container width
+$container_width : 1260px;
+
+.content {
+	padding: 1.25em 0;
+	background: $light-grey;
+}
+
+// helper classes for aligning
+.textalign--left {
+	text-align: left;
+}
+
+.textalign-center {
+	text-align: center;
+}
+
+.textalign--right {
+	text-align: right;
+}
+
+// helper class used on body element when overlay is open (e.g. nav overlay), to prevent scrolling of site behind overlay
+.overlay--open {
+	overflow-y: hidden;
+}
+
+// helper classes for show/hiding content based on viewport size
+.mb-show {
+	display: block;
+	@media only screen and (min-width : 600px){
+		display: none;
+	}
+}
+
+.mb-hide {
+	display: none;
+	@media only screen and (min-width : 600px){
+		display: block;
+	}
+}
+
+.tb-show {
+	display: block;
+	@media only screen and (min-width: 1024px){
+		display: none;
+	}
+}
+
+.tb-hide {
+	display: none;
+	@media only screen and (min-width: 1024px){
+		display: block;
+	}
+}

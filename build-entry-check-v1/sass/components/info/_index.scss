@@ -1,0 +1,17 @@
+/* 
+	
+	components/info/_index.scss
+
+*/
+
+.info {
+	font-size: 0.75em;
+	text-align: center;
+	padding-bottom: 1em;
+	margin-bottom: 1.5em;
+	background: $brand5;
+
+	strong {
+		color: $brand1; 
+	}
+}

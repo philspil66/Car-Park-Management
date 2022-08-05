@@ -1,0 +1,18 @@
+// import normalize
+@import "bower_components/normalize-scss/normalize.scss";
+
+// import config
+@import "config/colours"; 
+@import "config/helper";
+@import "config/icons";
+
+// import components
+@import "components/search--type/index";
+@import "components/search/index";
+@import "components/result/index"; 
+@import "components/sync/index";
+@import "components/msg/index";
+
+body {
+	background: $brand4;
+}

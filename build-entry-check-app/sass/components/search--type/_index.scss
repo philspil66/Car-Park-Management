@@ -1,0 +1,41 @@
+/* 
+	
+	components/search-type/_index.scss
+
+*/
+
+.search--type {
+
+	a {
+		float: left;
+		width: 50%;
+		padding: 0 1em;
+		font-size: 0.75em;
+		box-sizing: border-box;
+		background: $brand1;
+		color: $brand5;
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: none;
+		line-height: 40px;
+
+		&:first-child {
+			border-right: 1px solid $brand5;
+		}
+
+		&.active {
+			i {
+				display: inline-block;
+			}
+		}
+
+		i {
+			display: none;
+			margin-right: 0.5em;
+			font-size: 1.5em;
+			vertical-align: middle;
+		}
+
+	}
+
+}

@@ -1,0 +1,46 @@
+/* 
+	
+	components/admin/_admin--menu.scss 
+
+*/
+
+.admin--menu {
+
+	background: $white;
+	padding: 0.5em 0;
+	@include clearfix;
+	border-bottom: 1px dotted $orange;
+
+	p {
+		float: left;
+		font-size: 0.75em;
+		margin: 0;
+		padding-top: 0.75em;
+		strong {
+			color: $orange;
+		} 
+	}
+
+	a.button {
+		float: right;
+		margin-right: 0;
+	}
+
+	@media #{$mobile}{
+
+		padding: 1em 0;
+
+		p {
+			float: none;
+			margin-bottom: 0.75em;
+		}
+
+		a.button {
+			float: none;
+			display: block;
+			text-align: center;
+		}
+
+	}
+
+}

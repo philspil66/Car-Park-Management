@@ -1,0 +1,101 @@
+/* 
+	
+	components/search/_index.scss
+
+*/
+
+.search { 
+	margin-bottom: 1em;
+	position: relative;
+
+	input[type=text] {
+		width: 100%;
+		border: none;
+		background: $yellow;
+		font-size: 1.5em;
+		font-weight: 700;
+		padding: 0.5em;
+		border: 1px solid darken($yellow,20%);
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 0;
+		box-sizing: border-box;
+	}
+
+	input[type=text]::-webkit-input-placeholder {
+	  	color: darken($yellow,20%);
+	}
+
+	input[type=text]::-moz-placeholder {
+		color: darken($yellow,20%);
+	}
+
+	input[type=text]:-ms-input-placeholder {
+		color: darken($yellow,20%);
+	}
+
+	input[type=text]::-ms-clear {
+	    display: none;
+	}
+
+	input:focus {
+		outline: none;
+	}
+
+	a.clear-icon {
+		display: none;
+		position: absolute;
+		top: 8px;
+		right: 3px;
+                cursor: pointer;
+
+		i {
+			font-size: 2em;
+			color: darken($yellow,20%);
+		}
+
+		&.show {
+			display: block;
+		}
+	}
+
+	a.search-icon {
+		position: absolute;
+		top: 14px;
+		right: 5px;
+
+		i {
+			font-size: 1.5em;
+			color: darken($yellow,20%);
+		}
+
+		&.hide {
+			display: none;
+		}
+	}
+
+	a.status-icon {
+		display: none;
+		position: absolute;
+		top: 15px;
+		left: 8px;
+		width: 24px;
+		height: 24px;
+		background: $red;
+		border-radius: 30px;
+
+		&.amber {
+			background: $amber;
+		}
+
+		&.green {
+			background: $green;
+		}
+
+		&.show {
+			display: block;
+		}
+	}
+
+}

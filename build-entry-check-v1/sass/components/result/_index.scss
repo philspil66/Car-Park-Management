@@ -1,0 +1,71 @@
+/* 
+	
+	components/result/_index.scss
+
+*/
+
+.result {
+
+	background: $brand4;
+	border-bottom: 1px dotted $brand2; 
+	padding: 1em;
+	font-size: 0.75em;
+
+	.row {
+		margin-bottom: 0.5em;
+	}
+	.left {
+		float: left;
+		width: 50%;
+		padding-right: 10px;
+		box-sizing: border-box;
+		font-weight: 700;
+	}
+
+	.right {
+		float: left;
+		width: 50%;
+	}
+
+}
+
+.new-result {
+	padding: 1em;
+	background: $brand4;
+
+	
+
+	.details {
+		background: $brand5;
+		text-align: center;
+		padding: 1em;
+		border-bottom: 1px solid $brand4;
+		color: $brand2;
+
+		&.yellow {
+			background: $yellow;
+		}
+
+		.title {
+			text-align: center;
+			font-size: 0.75em;
+			margin-bottom: 1em;
+			display: none;
+		}
+
+		.details__detail {
+			color: $brand2;
+			font-weight: bold;
+			font-size: 1.5em;
+
+			&.small {
+				font-size: 1em;
+			}
+		}
+	}
+
+	+ .new-result {
+		padding-top: 0;
+	}
+
+}

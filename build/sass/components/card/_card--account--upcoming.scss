@@ -1,0 +1,272 @@
+/* 
+	
+	components/card/_card--account--upcoming.scss 
+
+*/
+
+.card--account--upcoming {
+
+	.card--account--upcoming__event { 
+		border-bottom: 1px solid $light-grey;
+	}
+
+	.card--acount--upcoming__product {
+		border-bottom: 1px solid $light-grey;
+		padding: 0.75em 0;
+
+		.card--account--upcoming__cancelled {
+			display: none;
+			background: $light-grey;
+			color: $mid-grey;
+			padding: 0.75em;
+			margin-bottom: 0.5em;
+			font-size: 0.75em;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	.card--acount--upcoming__product__details {
+		@include clearfix;
+		margin-bottom: 0.5em;
+
+		.card--acount--upcoming__product__details--left {
+			float: left;
+			width: 50%;
+			p {
+				margin: 0;
+
+				&:first-child {
+					font-size: 1em;
+				}
+			}
+		}
+
+		.card--acount--upcoming__product__details--right {
+			float: left;
+			width: 50%;
+			text-align: right;
+			p {
+				margin: 0;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.card--account--upcoming__message {
+		padding: 0;
+		margin: 0 0 0.75em;
+		font-size: 0.75em;
+		color: $mid-grey;
+	}
+
+	.card--account--upcoming__noplate {
+		margin-top: 1em;
+		background: lighten($error-msg,50%);
+		p {
+			padding: 1.25em;
+			margin: 0;
+			color: $error-msg;
+		}
+	}
+
+	.card--acount--upcoming__product__actions {
+		@include clearfix;
+
+		.card--account--upcoming__plate {
+			
+			float: left;
+			width: 50%;
+			@include clearfix;
+
+			.card--account--upcoming__plate--left {
+				float: left;
+				width: 65%;
+			}
+
+			.card--account--upcoming__plate--right {
+				float: left;
+				width: 35%;
+			}
+
+			input[type=text] {
+				width: 100%;
+				box-sizing: border-box;
+				background: $plate-bg;
+				color: $dark-grey;
+				border: none;
+				outline: none;
+				font-size: 1.5em;
+				font-weight: bold;
+				margin: 0;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			a.button {
+				text-align: center;
+				display: block;
+				margin: 0;
+				border-radius: 0;
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+
+		}
+
+		.card--account--upcoming__buttons {
+			float: left;
+			width: 40%;
+		}
+
+		.card--account--upcoming__buttons {
+			float: left;
+			width: 50%;
+			text-align: right;
+
+			.button:last-child {
+				margin-right: 0;
+			}
+		}
+
+	}
+
+	// disabled styles
+	.card--acount--upcoming__product.disabled { 
+
+		.button {
+			background: $mid-grey;
+		}
+
+		.button--outline {
+			border: 1px solid $mid-grey;
+			background: $white;
+			color: $mid-grey;
+		}	
+
+		.card--acount--upcoming__product__details--left p,
+		.card--acount--upcoming__product__details--right p {
+			color: $mid-grey;
+		}
+
+		.card--account--upcoming__plate {
+			input[type=text]{
+				background: $light-grey;
+				color: $mid-grey;
+			}
+		}
+
+		.card--account--upcoming__noplate {
+			display: none;
+		}
+
+		.card--account--upcoming__cancelled {
+			display: block;
+		}
+
+	}
+
+	.card--account--upcoming__messages {
+		@include clearfix;
+
+		.card--account--upcoming__messages--left {
+			float: left;
+			width: 50%;
+		}
+
+		.card--account--upcoming__messages--right {
+			float: left;
+			width: 50%;
+			text-align: right;
+		}
+
+		div.msg {
+			margin-top: 1.25em;
+			background: lighten($error-msg,50%);
+			p {
+				padding: 1.25em;
+				margin: 0;
+				color: $error-msg;
+			}
+
+			&.inline-msg {
+				display: inline-block;
+			}
+
+		}
+
+		.card--account--upcoming__messages--right {
+			
+			div.inline-msg {
+				margin-left: 1.25em;
+			}
+
+		}	
+
+	}
+
+	@media only screen and (max-width : 750px){
+
+		.card--acount--upcoming__product__actions {
+			.card--account--upcoming__plate {
+				width: 100%;
+			}
+			.card--account--upcoming__buttons {
+				width: 100%;
+
+				.button {
+					display: block;
+					margin: 1.25em 0 0;
+					text-align: center;
+				}
+			}
+		}
+
+		.card--account--upcoming__messages {
+			.card--account--upcoming__messages--left,
+			.card--account--upcoming__messages--right {
+				float: none;
+				width: 100%;
+				text-align: left;
+
+				div.inline-msg {
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+
+	}
+
+	@media #{$mobile-small}{
+
+		.card--acount--upcoming__product__actions {
+			.card--account--upcoming__plate .card--account--upcoming__plate--left {
+				float: none;
+				width: 100%;
+			}
+			.card--account--upcoming__plate .card--account--upcoming__plate--right {
+				float: none;
+				width: 100%;
+			}
+
+			.card--account--upcoming__plate a.button {
+				border-top-right-radius: 0;
+				border-bottom-left-radius: 4px;
+
+			}
+		}
+
+	}
+
+
+}

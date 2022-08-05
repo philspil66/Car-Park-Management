@@ -1,0 +1,44 @@
+/* 
+	
+	components/hero/_impersonate.scss 
+
+*/
+
+.impersonate {
+
+	background: $plate-bg; 
+	
+	.impersonate__inner {
+		max-width: 1260px;
+		margin: 0 auto;
+		padding: 1.25em;
+		text-align: center;
+	}
+
+	p { 
+		line-height: 40px;
+		margin: 0;
+		font-size: 0.75em;
+		display: inline-block;
+		margin-right: 1em;
+
+		i {
+			vertical-align: middle;
+			font-size: 2.5em;
+		}
+
+	}
+
+	@media #{$mobile}{ 
+
+		p { 
+			margin: 0 0 0.75em 0;
+		}
+
+		a.button {
+			display: block;
+			margin-right: 0;
+		}
+	}
+
+}

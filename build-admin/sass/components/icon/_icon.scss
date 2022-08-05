@@ -1,0 +1,24 @@
+/* 
+	
+	components/icon/_icon-link.scss
+
+*/
+
+.icon--link {
+
+	padding: 0 5px;
+
+	&:hover {
+		text-decoration: none;
+		color: $brand2;
+	}
+
+}
+
+.icon--link-medium {
+	font-size: 1.5em;
+}
+
+.icon--link-large {
+	font-size: 2.5em;
+}

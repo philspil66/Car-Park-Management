@@ -1,0 +1,66 @@
+/* 
+	
+	components/button/_button--dropdown.scss
+
+*/
+
+.button--dropdown {
+	i {
+		margin-left: 0.5em;
+		margin-right: 0;
+	}
+}
+
+.dropdown--wrapper {
+	position: relative;
+	display: inline-block;
+
+	.dropdown {
+		display: none;
+		position: absolute;
+		top: 40px;
+		right: 0;
+		z-index: 2000;
+		min-width: 150px;
+		padding: 1em;
+		box-sizing: border-box;
+		background: $brand5;
+		border: 1px solid $brand3; 
+		text-align: left;
+
+		.button {
+			display: block;
+			margin-bottom: 0.5em;
+			text-align: center;
+
+			&:last-child.button {
+				margin-bottom: 0em;
+			}
+		}
+
+		a {
+			display: block;
+			font-size: 0.75em;
+			margin-bottom: 0.5em;
+			white-space: nowrap;
+
+			&:hover {
+				text-decoration: none;
+				color: $brand2;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			i {
+				margin-right: 0.5em;
+			}
+		}
+
+		&.open {
+			display: block;
+		}
+	}
+
+}

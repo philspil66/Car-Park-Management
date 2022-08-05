@@ -1,0 +1,122 @@
+/* 
+	
+	components/footer/_footer.scss 
+
+*/
+
+.footer {
+	background: $dark-grey;
+	text-align: center;
+	padding: 2.5em 0 0;
+
+	.footer__facebook {
+
+		a {
+			color: #ffffff;
+			display: inline-block;
+			text-decoration: none;
+			margin-bottom: 1.25em;
+
+			span {
+				margin-top: 1.25em;
+				font-size: 1em;
+				display: block;
+			}
+
+			&:hover {
+				color: $orange;
+			}
+
+			i {
+				text-decoration: none;
+				font-size: 2.5em;
+				display: inline-block;
+			}
+
+		}
+
+	}
+
+	.footer__location {
+
+		i {
+			color: $white;
+			font-size: 2.5em;
+		}
+
+		span {
+			color: $white;
+			margin-top: 1.25em;
+			font-size: 1em;
+			display: block;
+		}
+
+	}
+
+	.footer__telephone {
+
+		a {
+			color: #ffffff;
+			display: inline-block;
+			text-decoration: none;
+
+			span {
+				margin-top: 1.25em;
+				font-size: 1em;
+				display: block;
+			}
+
+			&:hover {
+				color: $orange;
+			}
+
+			i {
+				text-decoration: none;
+				font-size: 2.5em;
+				display: inline-block;
+			}
+
+		}
+
+	}
+
+	.footer__bottom {
+
+		margin-top: 2.5em;
+		border-top: 1px solid lighten($dark-grey,10%);
+		padding: 1.25em 0 0;
+		
+		p {
+			color: $white;
+			font-size: 0.875em;
+			margin-top: 0;
+			
+		}
+
+	}
+
+	@media #{$tablet}{
+
+		.footer__facebook,
+		.footer__location,
+		.footer__telephone {
+			margin-bottom: 1.25em;
+			padding-bottom: 1.25em;
+			border-bottom: 1px solid lighten($dark-grey,10%);
+		}
+
+		.footer__bottom {
+			border-top: none;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.footer__facebook a i,
+		.footer__location i,
+		.footer__telephone a i {
+			font-size: 1.75em;
+		}
+
+	}
+
+}

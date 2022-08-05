@@ -1,0 +1,84 @@
+/* 
+	
+	components/search/_index.scss
+
+*/
+
+.search-form {
+	background: $brand5;
+	padding: 1em;
+
+	label {
+		font-size: 0.75em;
+		text-align: center;
+		display: block;
+		margin-bottom: 1em;
+
+		strong {
+			font-weight: bold;
+		}
+	}
+
+	input[type=text] {
+		width: 100%;
+		border: none;
+		background: $yellow;
+		font-size: 1.5em;
+		font-weight: 700;
+		padding: 0.5em;
+		border: 1px solid darken($yellow,20%);
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 0;
+		box-sizing: border-box;
+	}
+
+	input[type=text]::-webkit-input-placeholder {
+	  	color: darken($yellow,20%);
+	}
+
+	input[type=text]::-moz-placeholder {
+		color: darken($yellow,20%);
+	}
+
+	input[type=text]:-ms-input-placeholder {
+		color: darken($yellow,20%);
+	}
+
+	input[type=submit] {
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+		border-radius: 0;
+		background: $brand1;
+		border: none;
+		color: $brand5;
+		padding: 1em;
+		font-size: 0.75em;
+		margin: 0;
+	}
+
+	input:focus {
+		outline: none;
+	}
+
+	.search-wrapper {
+		position: relative;
+	}
+
+	a.clear-search {
+		display: none;
+		position: absolute;
+		top: 14px;
+		right: 6px;
+		background: url(../images/entry-check-app/clear-icon.svg) no-repeat;
+		width: 25px;
+		height: 25px;
+
+		&.show {
+			display: block;
+		}
+	}
+
+}

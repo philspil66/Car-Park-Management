@@ -1,0 +1,27 @@
+/* 
+	
+	components/message-box/_message--box.scss
+
+*/
+
+.message--box {
+
+	display: none;
+	z-index: 2001;
+	position: fixed;
+	@include calc(top, "(100% - 150px) / 2");
+	width: 100%;
+	text-align: center;
+
+	.message--box__inner {
+		background: $brand5;
+		max-width: 500px;
+		padding: 20px;
+		margin: 0 auto;
+	}
+
+	&.open {
+		display: block;
+	}
+
+}

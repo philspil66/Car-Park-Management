@@ -1,0 +1,23 @@
+{
+  "name": "entry-check-app",
+  "description": "App for checking entry to car parks",
+  "main": "index.js",
+  "authors": [
+    "Scott Turner"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "^3.0.3",
+    "jquery": "^2.2.3",
+    "mustache.js": "^2.2.1"
+  }
+}

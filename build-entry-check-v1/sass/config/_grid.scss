@@ -1,0 +1,56 @@
+/* 
+	
+	config/_grid.scss
+
+*/
+
+.grid {
+	/* @include outer-container;  */
+	@include clearfix;
+
+	.column__20 {
+		@include span-columns(2.4);
+	}
+
+	.column__25 {
+		@include span-columns(3);
+	}
+
+	.column__33 {
+		@include span-columns(4);
+	}
+
+	.column__50 {
+		@include span-columns(6);
+	}
+
+	.column__75 {
+		@include span-columns(9);
+	}
+
+	.column__100 {
+		@include span-columns(12);
+	}
+
+	@include media($desktop){
+
+		.column__25,
+		.column__33,
+		.column__75 {
+			@include span-columns(12);
+		}
+
+	}
+
+	@include media($tablet){
+
+		.column__25,
+		.column__33,
+		.column__50,
+		.column__75 {
+			@include span-columns(12);
+		}
+
+	}
+
+}

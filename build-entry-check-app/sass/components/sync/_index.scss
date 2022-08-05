@@ -1,0 +1,55 @@
+/* 
+	
+	components/sync/_index.scss
+
+*/
+
+.event--data {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+
+	a {
+		display: block;
+		background: $brand1;
+		color: $brand5;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.75em;
+		line-height: 40px;
+
+		i {
+			font-size: 1.5em;
+			vertical-align: middle;
+			margin-right: 0.5em;
+		}
+	}
+
+	.event--data__details {
+		background: $brand5;
+		text-align: center;
+
+		.event--data__details__inner {
+			padding: 1em; 
+		}
+
+		.event--data__details__name {
+			font-size: 0.75em;
+			font-weight: bold;
+			padding-bottom: 0.5em;
+			color: $brand1;
+		}
+
+		.event--data__details__records {
+			font-size: 0.75em;
+			color: $brand2;
+
+			strong {
+				color: $brand1;
+			}
+		}
+
+	}
+
+}

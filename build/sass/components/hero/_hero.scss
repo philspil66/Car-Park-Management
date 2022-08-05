@@ -1,0 +1,53 @@
+/* 
+	
+	components/hero/_hero.scss 
+
+*/
+
+.hero {
+	background: url(../images/hero/ricoh-bg@600x430.png) center center no-repeat;
+	background-size: cover;
+	
+	.hero__overlay {
+		background: rgba(235,57,19,0.8);
+		background: rgba(0,0,0,0.6);
+		padding: 70px 16px;
+		text-align: center;
+	}
+
+	p {
+		color: $white;
+	}
+
+	h1 {
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	@media only screen and (min-width: $tablet-breakpoint){
+		background: url(../images/hero/ricoh-bg@1500x458.png) center center no-repeat;
+		background-size: cover;
+
+		.hero__overlay {
+			padding: 60px 16px;
+		}
+
+		h1 {
+			font-size: 3em;
+		}
+	}
+
+	@media only screen and (min-width: $desktop-breakpoint){
+		background: url(../images/hero/ricoh-bg@2000x600.png) center center no-repeat;
+		background-size: cover;
+
+		.hero__overlay {
+			padding: 120px 16px;
+		}
+
+		h1 {
+			font-size: 4em;
+		}
+	}
+
+}

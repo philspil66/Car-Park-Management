@@ -1,0 +1,31 @@
+/* 
+	
+	components/event-details/_index.scss
+
+*/
+
+.event--details {
+	background: $brand5;
+	
+	.event--details__inner {
+		padding: 1em;
+		text-align: center;
+		border-bottom: 1px dotted $brand1;
+	}
+
+	p {
+		font-size: 0.75em;
+		color: $brand2;
+		margin: 0;
+		padding: 0;
+
+		strong, span {
+			color: $brand1;
+		}
+
+		&:first-child {
+			margin-bottom: 0.5em;
+		}
+	}
+
+}

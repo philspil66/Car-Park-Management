@@ -1,0 +1,23 @@
+/* 
+	
+	components/order/_order--information.scss
+
+*/
+
+.order--information {
+	padding: 1em;
+	border-bottom: 1px solid $brand3;
+
+	p {
+		margin: 0;
+		padding: 0 0.5em 0.5em;
+		font-size: 0.75em;
+	}
+
+	.column__25 {
+		p {
+			font-weight: 700;
+		}
+	}
+
+}

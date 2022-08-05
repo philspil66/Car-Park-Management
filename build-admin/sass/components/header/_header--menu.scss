@@ -1,0 +1,44 @@
+/* 
+	
+	components/header/_header--menu.scss
+
+*/
+
+.header--menu {
+
+	background: $brand2;
+
+	.header--menu__menu {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1em 0;
+		@include clearfix;
+
+		a {
+			color: $brand5;
+			text-decoration: none;
+			display: inline-block;
+			padding: 0.5em 0.5em 0.5em 0;
+			float: left;
+			width: 25%;
+			text-transform: uppercase;
+			font-size: 0.75em;
+
+			&.active {
+				color: $brand1;
+				font-weight: bold;
+			}
+
+			&:hover {
+				color: $brand1;
+			}
+
+			i {
+				display: inline-block;
+				@include transform(scale(0.75) rotate(-90deg));
+			}
+
+		}
+	}
+
+}

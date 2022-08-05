@@ -1,0 +1,32 @@
+/* 
+	
+	config/_helper.scss
+
+*/
+
+.helper__align--center {
+	text-align: center; 
+}
+
+.helper__align--left {
+	text-align: left; 
+}
+
+.helper__align--right {
+	text-align: right; 
+}
+
+// for ajax loading icon
+@keyframes anim-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    @include animation(anim-rotate 2s infinite linear);
+}

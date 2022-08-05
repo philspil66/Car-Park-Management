@@ -1,0 +1,50 @@
+$susy: (
+  columns: 12,
+  gutter-position: inside,
+  math: fluid,
+  gutters: 1/4,
+  output: float,
+);
+
+.susygrid {
+	max-width: 1260px;
+	margin: 0 auto;
+	@include clearfix;
+
+	.column-100 {
+		@include span(100%);
+	}	
+
+	.column-50 {
+		@include span(50%);
+	}
+
+	.column-33 {
+		@include span(33%);
+	}
+
+	.column-25 {
+		@include span(25%);
+	}
+
+	@media #{$desktop}{
+		max-width: none;
+		/*margin: 0 1.25em*/;
+	}
+
+	@media #{$tablet}{ 
+		.column-25 {
+			@include span(50%);
+		}
+
+	}
+
+	@media #{$mobile}{
+		.column-50, 
+		.column-33,
+		.column-25 {
+			@include span(100%); 
+		}
+	}
+
+}

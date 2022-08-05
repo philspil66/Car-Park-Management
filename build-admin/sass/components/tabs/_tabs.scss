@@ -1,0 +1,77 @@
+/* 
+	
+	components/tabs/_tabs.scss
+
+*/
+
+.tabs {
+	@include clearfix;
+	background: $brand5;
+	border-left: 1px solid $brand3;
+	border-right: 1px solid $brand3;
+
+	a {
+		float: left;
+		background: lighten($brand3,20%);
+		background: $brand5;
+		color: $brand3;
+		display: inline-block;
+		padding: 1.25em;
+		font-size: 0.75em;
+		text-transform: uppercase;
+		border-top: 1px solid $brand3;
+		border-bottom: 1px solid $brand3;
+		border-left: 1px solid $brand3;
+
+		&:hover {
+			text-decoration: none;
+			color: $brand1;
+		}
+
+		&.active {
+			background: $brand5;
+			color: $brand1;
+			border-bottom: 1px solid $brand4;
+			font-weight: 700;
+		}
+
+		&:first-child {
+			border-top-left-radius: 4px;
+			margin-left: 1.25em;
+		}
+
+		&:last-child {
+			border-right: 1px solid $brand3;
+			border-top-right-radius: 4px;
+		}
+
+		&.disabled {
+			background: darken($brand4,10%);
+
+			&:hover {
+				color: $brand3;
+			}
+		}
+	}
+
+}
+
+.tabs--content {
+
+	margin-top: -1px;
+	border: 1px solid $brand3;
+	background: $brand5;
+
+	.tabs--content__panel {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	.tabs--content__spacer {
+		padding: 1.25em;
+	}
+
+}

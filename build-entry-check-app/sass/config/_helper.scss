@@ -1,0 +1,11 @@
+/* 
+	
+	config/_helper.scss
+
+*/
+
+.clearfix:after {
+    content:" ";
+    display:table;
+    clear:both;
+}

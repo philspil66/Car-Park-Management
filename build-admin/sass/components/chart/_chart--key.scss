@@ -1,0 +1,49 @@
+/* 
+	
+	components/chart/_chart--key.scss
+
+*/
+
+.chart--key {
+	padding: 1.25em;
+
+	.chart--key__item {
+		@include clearfix;
+		display: table;
+		width: 100%;
+		border-bottom: 1px dotted $brand3;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		.chart--key__item--name {
+			@include clearfix;
+			width: 75%;
+			padding: 0.5em 0;
+			border-sizing: border-box;
+			font-size: 0.75em;
+			display: table-cell;
+			border-right: 1px dotted $brand3;
+
+			span {
+				width: 15px;
+				height: 15px;
+				margin-right: 10px;
+				display: inline-block;
+				float: left;
+				background: $brand4;
+			}
+		}
+
+		.chart--key__item--stat {
+			width: 25%;
+			padding: 0.5em 0 0.5em 0.5em;
+			border-sizing: border-box;
+			font-size: 0.75em;
+			display: table-cell;
+		}
+
+	}
+
+}

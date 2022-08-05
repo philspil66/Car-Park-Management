@@ -1,0 +1,54 @@
+/* 
+	
+	components/nav/_nav-mobile.scss 
+
+*/
+
+.nav--mobile {
+	display: none;
+	background: $orange;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 1000;
+
+	.nav__inner {
+		position: relative;
+		padding-top: 3em;
+
+		a {
+			color: $white;
+			display: block;
+			font-size: 1em;
+			padding: 10px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: 'Open Sans', sans-serif;
+
+			&:hover {
+				color: $dark-grey;
+			}
+
+		}
+
+	}
+
+	.nav__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+
+		i {
+			font-size: 2em;
+			color: $white;
+		}
+	}
+
+}
+
+.nav--open {
+	display: block;
+}

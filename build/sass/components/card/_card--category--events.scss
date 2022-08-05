@@ -1,0 +1,172 @@
+/* 
+	
+	components/card/_card--category--events--new.scss 
+
+*/
+
+.card--category--events {
+
+	@include clearfix;
+	margin-bottom: 1.5em;
+	float: left;
+	width: 100%;
+	background: $white;
+	position: relative;
+
+	.event__type {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 90px 90px 0;
+		border-color: transparent $mid-grey transparent transparent;
+
+		.event__type__icon {
+			height: 35px;
+			width: 35px;
+			margin-top: 10px;
+			margin-left: 45px;
+			background: url(../images/icons/ticket-icon.svg) no-repeat right top;
+
+			&.football {
+				background: url(../images/icons/football-icon.svg) no-repeat right top;
+			}
+
+			&.rugby {
+				background: url(../images/icons/rugby-icon.svg) no-repeat right top;
+			}
+
+			&.music {
+				background: url(../images/icons/music-icon.svg) no-repeat right top;
+			}
+
+			&.snooker {
+				margin-left: 49px;
+				background: url(../images/icons/snooker-icon.svg) no-repeat right top;
+			}
+		}
+
+	}
+
+	.event__info {
+		padding: 1.5em;
+		box-sizing: border-box;
+
+		h2 {
+			color: $dark-grey;
+		}
+
+	}
+
+	.event__info__row {
+		@include clearfix;
+		padding: 0.5em 0;
+		border-bottom: 1px dotted $mid-grey;
+
+		.event__info__left {
+			float: left;
+			width: 50%;
+
+			a.event__name {
+				font-size: 0.875em;
+				font-weight: bold;
+			}
+			p.event__name,
+			p.event__date {
+				margin: 0;
+			}
+
+			p.event__name {
+				color: $orange;
+				font-weight: 700;
+			}
+		}
+
+		.event__info__right {
+			float: left;
+			width: 50%;
+			text-align: right;
+
+			.button {
+				margin: 0.5em 0 0 0;
+			}
+		}
+
+	}
+
+	.event__view__all {
+		margin-top: 1.25em;
+
+		a.button {
+			margin-right: 0;
+		}
+	}
+
+	@media #{$mobile}{
+
+		.event__info__row {
+			.event__info__left,
+			.event__info__right {
+				float: none;
+				width: 100%;
+			}
+
+			.event__info__left {
+				margin-bottom: 0.75em;
+			}
+
+			.event__info__right {
+				.button {
+					display: block;
+					text-align: center;
+					margin: 0 0 0.75em 0;
+				}
+			}
+		}
+
+		.event__view__all {
+			a.button {
+				display: block;
+				text-align: center;
+			}
+		}
+
+		.event__type {
+			border-width: 0 70px 70px 0;
+
+			.event__type__icon {
+				height: 25px;
+				width: 25px;
+				margin-top: 10px;
+				margin-left: 38px;
+
+				&.snooker {
+					margin-left: 40px;
+				}
+			}
+		}
+
+	}
+
+}
+
+.category-row {
+
+	@media only screen and (max-width: 800px){
+
+		.column__50 {
+			width: 100%;
+		}
+
+		.card--alt .buttons {
+			position: static; 
+		}
+
+	}
+
+}
+
+
+

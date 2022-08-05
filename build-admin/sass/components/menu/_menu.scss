@@ -1,0 +1,103 @@
+/* 
+	
+	components/menu/_menu.scss
+
+*/
+
+.menu {
+	position: fixed;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	height: 100%;
+	width: 250px;
+	background: $brand2;
+	z-index: 1000;
+	@include transition(all 0.5s ease-in-out);
+
+	ul.menu__top {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+
+		> li {
+			border-bottom: 1px solid rgba(255,255,255,0.05);
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			display: block;
+			color: #aeb2b7;
+			padding: 1em 1.25em;
+			position: relative;
+
+			span {
+				display: inline-block;
+				font-size: 0.75em;
+			}
+
+			&.active,
+			&:hover {
+				background: $brand2;
+				color: $brand1;
+				text-decoration: none;
+			}
+
+			i:first-child {
+				margin-right: 0.5em;
+
+			}
+
+			i.icon-arrow {
+				margin-right: 0;
+				position: absolute;
+				top: 22px;
+				right: 10px;
+				@include transform( scale(0.75) rotate(-90deg) );
+				color: #aeb2b7;
+				font-size: 0.75em;
+			}
+
+			&.active {
+				i {
+					@include transform( scale(0.75) rotate(0deg) );
+				}
+			}
+
+		}
+	}
+
+	ul.menu__sub {
+		display: none;
+		margin: 0;
+		list-style-type: none;
+		background: darken($brand2,5%);
+
+		> li {
+			margin: 0;
+		}
+
+		a {
+			padding: 16px 16px 16px 48px;
+			font-size: 0.75em;
+
+			&:hover {
+				background: darken($brand2,10%);
+			}
+
+		}
+
+	}
+
+	&.menu-collapsed {
+		margin-left: -250px;
+	}
+
+	@include media($mobile){
+
+		margin-top: -70px;
+		z-index: 2000;
+
+	}
+
+}

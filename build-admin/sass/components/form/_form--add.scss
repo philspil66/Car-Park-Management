@@ -1,0 +1,38 @@
+/* 
+	
+	components/form/_form--add.scss
+
+*/
+
+.form--add {
+	@include clearfix;
+	margin-bottom: 1.25em;
+}
+
+.form--add__form {
+	display: none;
+	margin-bottom: 1.25em;
+
+	.form--add__form__head {
+		background: $brand4;
+		border: 1px solid $brand3;
+		padding: 0.5em;
+
+		h2 {
+			margin: 0.75em 0 0.75em 0.5em;
+			font-size: 0.875em;
+			color: $brand2;
+			font-weight: 700;
+		}
+
+	}
+
+	.form--add__form__panel {
+		border: 1px solid $brand3;
+		border-top: none;
+		background: lighten($brand4,5%);
+		padding: 1em;
+	}
+
+}
+

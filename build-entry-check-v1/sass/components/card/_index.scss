@@ -1,0 +1,76 @@
+/* 
+	
+	components/card/_index.scss
+
+*/
+
+.card { 
+
+	margin: 0 1em 1em;
+	background: $brand5;
+
+	.card__plate {
+		background: $yellow;
+		font-size: 1em; 
+		font-weight: bold;
+		text-align: center;
+		padding: 1em;
+		border: 1px solid darken($yellow,20%);
+	}
+
+	.card__carpark {
+		border: 1px solid $brand3;
+		border-top: none;
+		padding: 1em;
+
+		.card__carpark__title {
+			font-size: 0.75em;
+			font-weight: bold;
+			text-align: center;
+			color: $brand2;
+		}
+
+		.card__carpark__name {
+			font-size: 1.75em;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $brand1;
+		}
+
+	}
+
+	.card__detail {
+		border-bottom: 1px solid $brand4;
+
+		.card__detail__left {
+			float: left;
+			width: 40%;
+			font-size: 0.75em;
+			font-weight: bold;
+			padding: 1em;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			border-right: 1px solid $brand4;
+		}
+
+		.card__detail__right {
+			float: left;
+			width: 60%;
+			font-size: 0.75em;
+			padding: 1em;
+			box-sizing: border-box;
+		}
+
+		&.alt {
+			.card__detail__left,
+			.card__detail__right {
+				color: $brand1;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+		}
+
+	}
+
+}

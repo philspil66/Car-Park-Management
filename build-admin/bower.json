@@ -1,0 +1,29 @@
+{
+  "name": "admin-rpw",
+  "description": "Admin - RPW",
+  "main": "index.js",
+  "authors": [
+    "Scott Turner"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "^3.0.3",
+    "bourbon": "^4.2.6",
+    "neat": "^1.7.4",
+    "jquery": "^2.2.3",
+    "Chart.js": "^2.0.2",
+    "mustache.js": "mustache#^2.2.1",
+    "jquery-ui": "^1.11.4"
+  }
+}

@@ -1,0 +1,51 @@
+/* 
+	
+	components/card/_card--alt.scss 
+
+*/
+
+.card--alt {
+	position: relative;
+	background: $dark-grey;
+	height: 100%;
+
+	.card--alt__inner {
+		padding: 1.5em;
+	}
+
+	h2 {
+		color: $white;
+	}
+
+	p {
+		color: $white; 
+	}
+
+	.buttons {
+		position: absolute;
+		bottom: 1.5em;
+		right: 1.5em;
+	}
+
+	.button {
+		margin-right: 0;
+		&:hover {
+			background: $white;
+			color: $orange;
+		}
+	}
+
+	@media #{$mobile}{
+
+		.buttons {
+			position: static;
+		}
+
+		.button {
+			display: block;
+			text-align: center;
+		}
+
+	}
+
+}

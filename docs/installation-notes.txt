@@ -1,0 +1,221 @@
+Credentials from Postit notes (stripe) (AH)
+brain@capuk.eu, kavanagh2903
+
+Bkavanagh2903
+bkavanagh2903
+----
+
+Go Daddy:
+Customer #: 119729907
+Pw: Bkavanagh2903
+----
+
+Commands to run and packages to install after every fresh installation:
+
+/*******************************************************************************
+ *
+ * 2016-03-04 - AyyazH
+ *
+ * As a phase 1 implementation, instead of using any API's for generating PDFs
+ * simple PDF package is used with Laravel wrapper. 
+ *
+ * Run following commands to install PDF related packages. You may google to 
+ * see if these versions are still the latest.
+ *
+ *   Even though instructions below ask to install H4CC/ libraries but we may not
+ *   need them. But now that we have them on all our local and server machines
+ *   we are not going to undo and test whether these are really required or not.
+ *   
+ *   If a fresh install is attempted in the future then ignore step 3 and see
+ *   if it all works, if not then run the step 3.
+ *   
+ ******************************************************************************/
+ 
+// Make sure you're in project directory, eg. /var/www/html/est/
+
+//
+// 1. Install Snappy
+    sudo composer require knplabs/knp-snappy
+
+//
+// 2. Install barryvdh (laravel wrapper)
+composer require barryvdh/laravel-snappy
+
+
+/*******************************************************************************
+ * On a 32-bit machine run this
+
+//
+// 3. Install H4CC libraries
+    sudo composer require h4cc/wkhtmltopdf-i386 0.12.x
+    sudo composer require h4cc/wkhtmltoimage-i386 0.12.x
+
+ ******************************************************************************/
+
+
+/*******************************************************************************
+ * This works on 64 bit Ubuntu server instance
+
+//
+// 3. Install H4CC libraries
+    sudo composer require h4cc/wkhtmltopdf-amd64 0.12.x
+    sudo composer require h4cc/wkhtmltoimage-amd64 0.12.x
+
+//
+// 4. Install wkhtmltopdf
+    sudo add-apt-repository ppa:ecometrica/servers
+    sudo apt-get update
+    sudo apt-get install wkhtmltopdf  
+
+//
+// 5. To deal with X-server not found error:
+// a. Install a library 
+    sudo apt-get install xvfb
+
+//
+// b. Create a shell script (wkhtmltopdf.sh) in /usr/bin/ directory, add the following line and save.
+    xvfb-run -a -s "-screen 0 640x480x16" wkhtmltopdf $*
+
+//
+// c. Apply correct permissions on the shell script
+    sudo chmod a+x /usr/bin/wkhtmltopdf.sh  
+
+//
+//  6. To test the installation run the following:
+    wkhtmltopdf.sh http://www.google.com /tmp/google.pdf
+    If you can see google.pdf in the /tmp folder then your installation work, delete google.pdf
+
+// 
+// 7. Point the config to the correct wkhtmltopdf library   
+// In vendor/barryvdh/laravel-snappy/config/snappy.php, make sure 'binary' key is set to '/usr/bin/wkhtmltopdf.sh' in 'pdf' array
+
+ ******************************************************************************/
+
+//
+// 8. Add following line in config/app.php -> Providers array:
+Barryvdh\Snappy\ServiceProvider::class,
+
+//
+// 9. Add following lines in config/app.php -> aliases array:
+'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+'Image' => Barryvdh\Snappy\Facades\SnappyImage::class,
+
+
+
+/*******************************************************************************
+ *
+ * 2016-03-16 - AyyazH
+ *
+ * Stripe setup instructions and some text card numbers.
+ *
+ ******************************************************************************/
+
+sudo composer require stripe/stripe-php
+
+To test payment process you may use following card numbers with any combination
+of expiry date and CVC code:
+4000000000000101 will fail based upon an invalid CVC
+4000000000000002 will be declined (as if there were insufficient funds)
+4000000000000069 will be declined as an expired card
+4000000000000119 will be declined for a generic processing error
+4000000000000010 will be declined for address validation failure.
+4242424242424242 works
+4000000000000077 works
+
+/*******************************************************************************
+ *
+ * 2016-04-01 - AyyazH
+ *
+ * Email for SMTP
+ *
+ ******************************************************************************/
+
+do-not-reply@ricoharenaparking.co.uk
+coventry1987
+Incoming POP:
+mail.livemail.co.uk
+Port: 995
+Use SSL
+
+Outgoing:
+smtp.livemail.co.uk
+Port: 25
+Use SSL
+
+/*******************************************************************************
+ *
+ * 2016-04-01 - AyyazH
+ *
+ * Local environment settings
+ *
+ ******************************************************************************/
+
+// APP_KEY
+// If APP_KEY doesn't exist then run the 
+// following command to generate a new local:
+// php artisan key:generate
+
+APP_ENV=local
+APP_DEBUG=true
+
+// Database credentials
+// Make sure there's matching config/database.php file, 
+// ie it's set to read values from .env file
+DB_HOST=127.0.0.1
+DB_PORT=8889
+DB_DATABASE=est
+DB_USERNAME=root
+DB_PASSWORD=root
+
+// Make sure there's matching config/cache.php file, 
+// ie it's set to read values from .env file
+CACHE_DRIVER=file
+
+// Make sure there's matching config/session.php file, 
+// ie it's set to read values from .env file
+SESSION_DRIVER=file
+
+ROOT_URL=http://localhost:8000/
+
+STRIPE_PRIVATE_KEY=sk_test_NaJdL24JauIYs31LcHuL3YwM;
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smpt.livemail.co.uk
+MAIL_USERNAME=do-not-reply@ricoharenaparking.co.uk
+MAIL_PASSWORD=coventry1987
+MAIL_PORT=465
+MAIL_ENCRYPTION=ssl
+
+QUEUE_DRIVER=database
+
+
+/*******************************************************************************
+ *
+ * 2016-04-08 - ScottT
+ *
+ * Laravel datatables package setup
+ *
+ ******************************************************************************/
+
+1) Install Laravel Datatables from terminal:
+
+    sudo composer require yajra/laravel-datatables-oracle
+
+2) Add Datatables Service Provider and Facade to config/app.php.
+
+    Yajra\Datatables\DatatablesServiceProvider::class               (under providers)     
+
+    'Datatables' => Yajra\Datatables\Facades\Datatables::class      (under aliases)
+
+
+
+/*******************************************************************************
+ *
+ * 2016-05-26 - AyyazH
+ *
+ * Queues
+ *
+ ******************************************************************************/
+1. Run this command to process the Q with max 5 tries per job
+
+    php artisan queue:listen --tries=5 --delay=60

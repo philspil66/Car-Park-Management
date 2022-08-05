@@ -1,0 +1,133 @@
+/* 
+	
+	components/form/_form--standard.scss
+
+*/
+
+.form--standard {
+	@include clearfix;
+
+	.form--standard__row {
+		margin-bottom: 1.25em;
+
+		&.nmb {
+			/* margin-bottom: 0; */
+		}
+	}
+
+	label {
+		display: block;
+		font-size: 0.75em;
+		color: $brand2;
+
+		&.inline {
+			display: inline-block;
+		}
+
+		span {
+			color: $brand1;
+		}
+	}
+
+	input[type=text] {
+		width: 100%;
+		height: 38px;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		border: 1px solid darken($brand4,10%);
+		font-size: 0.75em;
+		border-radius: 4px;
+		color: $brand2;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $brand1;
+		}
+	}
+
+	select {
+		width: 100%;
+		-webkit-appearance: menulist;
+		height: 38px;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		background: $brand5;
+		outline: none;
+		border: 1px solid darken($brand4,10%);
+		font-size: 0.75em;
+		border-radius: 4px;
+		color: $brand2;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $brand1;
+		}
+	}
+
+	textarea {
+		width: 100%;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		border: 1px solid darken($brand4,10%);
+		font-size: 0.75em;
+		border-radius: 4px;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $brand1;
+		}
+	}
+
+	input[type=radio],
+	input[type=checkbox] {
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	/* inline styles */
+	.form--inline__row {
+		display: inline-block;
+		margin-bottom: 1.25em;
+
+		label {
+			display: inline-block;
+			margin-right: 10px;
+			text-align: right;
+		}
+
+		input[type=text] {
+			width: auto;
+			height: 38px;
+			padding: 5px 10px;
+			margin-right: 10px;
+			box-sizing: border-box;
+			border: 1px solid darken($brand4,10%);
+			font-size: 0.75em;
+			border-radius: 4px;
+
+			&:focus {
+				outline: none;
+				border: 1px solid $brand1;
+			}
+		}
+
+		input[type=submit]{
+			margin-right: 10px; 
+		}
+
+		select {
+			width: auto;
+			margin-right: 10px;
+		}
+
+		input[type=radio],
+		input[type=checkbox] {
+			margin-left: 10px;
+		}
+
+		&.nmb {
+			margin-bottom: 0;
+		}
+	}
+
+}

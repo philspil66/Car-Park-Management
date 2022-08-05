@@ -1,0 +1,45 @@
+/* 
+	
+	components/breadcrumb/_breadcrumb.scss 
+
+*/
+
+.bread {
+
+	background: $light-grey;
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: inline-block;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-size: 0.75em;
+			color: lighten($dark-grey,50%);
+			text-transform: uppercase;
+
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				color: $orange;
+				display: inline-block;
+				padding: 1.25em 0;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			span.arrow {
+				display: inline-block;
+				padding: 0 0.5em;
+				font-size: 0.75em;
+			}
+
+		}
+
+	}
+
+}

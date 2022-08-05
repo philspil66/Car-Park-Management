@@ -1,0 +1,17 @@
+/* 
+	
+	components/form/_form--panel.scss
+
+*/
+
+.form--panel {
+
+	border: 1px solid $brand3;
+	padding: 1em; 
+	background: lighten($brand4,5%);
+
+	p {
+		color: $brand2;
+	}
+
+}

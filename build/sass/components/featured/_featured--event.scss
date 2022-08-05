@@ -1,0 +1,56 @@
+/* 
+	
+	components/featured/_featured--event.scss 
+
+*/
+
+.featured--event { 
+	@include clearfix;
+	background: url(../images/featured-music-bg.png) no-repeat left bottom;
+	text-align: center;
+	padding: 2.5em 1em 4em;
+
+	h2 {
+		color: $orange;
+		font-size: 2em;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	a.button--outline {
+		background: $white;
+	}
+
+	@media #{$tablet}{
+		background-position: left bottom;
+		h2 {
+			font-size: 1.5em;
+		}
+	}
+
+	@media #{$mobile}{
+
+		padding: 1em 1em 2em;
+		background: none;
+
+		.column__100 {
+			padding: 0;
+		}
+
+		a.button {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 1.5em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+	}
+
+}

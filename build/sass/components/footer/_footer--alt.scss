@@ -1,0 +1,113 @@
+/* 
+	
+	components/footer/_footer--alt.scss 
+
+*/
+
+.footer--alt {
+
+	background: $white;
+
+	.footer--alt__top {
+		@include clearfix;
+		margin: 0 auto;
+		max-width: 1260px;
+		border-bottom: 1px dotted $mid-grey;
+		margin-bottom: 1.25em;
+	}
+
+	.footer--alt__column {
+		float: left;
+		width: 50%;
+	}
+
+	.footer--alt__details {
+		padding: 1em;
+
+		h4 {
+			color: $mid-grey;
+			font-weight: 700;
+			margin: 0 0 1.5em;
+		}
+	}
+
+	.footer--alt__link {
+		@include clearfix;
+		display: block;
+		margin-bottom: 1.25em;
+		text-decoration: none;
+
+		span.footer--alt__link--icon { 
+			float: left;
+			margin-right: 0.75em;
+			i {
+				color: $orange;
+				font-size: 1.5em;
+			}
+		}
+		span.footer--alt__link--text { 
+			float: left;
+			color: $orange;
+			font-size: 0.875em;
+		}
+
+		&:hover {
+			color: $mid-grey;
+		}
+
+	}
+
+	.footer--alt__bottom {
+		@include clearfix;
+		margin: 0 auto;
+		max-width: 1260px;
+		p {
+			color: $mid-grey;
+			margin: 0;
+			padding: 0 1em 1em;
+			font-size: 0.875em;
+		}
+
+		.footer--alt__column:nth-child(2) {
+			text-align: right;
+		}
+	}
+
+	@media #{$mobile}{
+
+		.footer--alt__top {
+			text-align: center;
+		}
+
+		.footer--alt__column {
+			float: none;
+			width: 100%;
+		}	
+
+		.footer--alt__bottom {
+			text-align: center;
+			.footer--alt__column:nth-child(2) {
+				text-align: center; 
+			}
+		}
+
+		.footer--alt__link {
+			display: block;
+			text-align: center;
+
+			span.footer--alt__link--icon {
+				display: block;
+				margin-right: 0;
+			}
+
+			span.footer--alt__link--icon,
+			span.footer--alt__link--text { 
+				float: none;
+			}
+
+		}
+
+	}
+
+}
+

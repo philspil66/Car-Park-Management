@@ -1,0 +1,99 @@
+/* 
+	
+	config/_fonts.scss 
+
+*/
+
+$base-font-size 	: 16px;
+$base-line-height	: 24px;
+
+@mixin font_vertical_rhythm($size) {
+  font-size: 0px + $size;
+  font-size: 0rem + $size / $base-font-size;
+  line-height: ceil($size / $base-line-height) * ($base-line-height / $size);
+  margin-bottom: 0px + $base-line-height;
+  margin-bottom: ($base-line-height / $base-font-size) +rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: $orange;
+}
+p, div {
+    font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+a {
+	color: $orange;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* @mixin text__regular($colour){
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: $colour;
+}
+
+@mixin text__regular--bold($colour){
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: $colour;
+} */
+
+h1 {
+	font-weight: 800;
+	color: $dark-grey;
+	@include font_vertical_rhythm(24px);
+}
+
+h2 {
+	font-weight: 700;
+	@include font_vertical_rhythm(20px);
+}
+
+h3 {
+	font-weight: 700;
+	@include font_vertical_rhythm(16px);
+}
+
+h4 {
+	@include font_vertical_rhythm(14px);
+}
+
+h5 {
+	@include font_vertical_rhythm(11px);
+}
+
+h6 {
+	@include font_vertical_rhythm(10px);
+}
+
+p {
+	@include font_vertical_rhythm(14px);
+}
+
+ul {
+	padding: 0;
+	margin: 0 0 0 20px;
+}
+
+ol li,
+ul li {
+	@include font_vertical_rhythm(16px); 
+}
+
+
+
+
+
+
+
+
+
+

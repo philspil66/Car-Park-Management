@@ -1,0 +1,79 @@
+/* 
+	
+	components/pagination/_pagination.scss
+
+*/
+
+.pagination {
+
+	@include clearfix;
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		float: left;
+		margin: 0;
+
+		&.active span {
+			border: 1px solid $brand1;
+			color: $brand1;
+		}
+	}
+
+	a {
+		border: 1px solid darken($brand4,10%);
+		border-radius: 4px;
+		display: inline-block;
+		padding: 5px 10px;
+		margin-left: 2px;
+		font-size: 0.875em;
+		cursor: pointer;
+		color: $brand3;
+
+		&:hover {
+			text-decoration: none;
+			border: 1px solid $brand1;
+			color: $brand1;
+		}
+
+		&.current {
+			border: 1px solid $brand1;
+			color: $brand1;
+		}
+		
+	}
+
+	span {
+		border: 1px solid darken($brand4,10%);
+		color: $brand3;
+		border-radius: 4px;
+		display: inline-block;
+		padding: 5px 10px;
+		font-size: 0.875em;
+		margin-left: 2px;
+	}
+
+}
+
+.pagination--container {
+	@include clearfix;
+
+	.pagination__info {
+		float: left;
+		width: 50%;
+		p {
+			margin: 0;
+			color: $brand3;
+		}
+	}
+
+	.pagination__links {
+		float: left;
+		width: 50%;
+		text-align: right;
+	}		
+	
+}
+

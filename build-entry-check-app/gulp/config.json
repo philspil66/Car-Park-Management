@@ -1,0 +1,13 @@
+{
+	"styles" : {
+		"src"  : "./sass/**/*.scss",
+	 	"dest" : "../public/css"
+	},
+	"scripts" : {
+		"src"  : "./js/**/*.js",
+		"dest" : "../public/js"
+	},
+	"views" : {
+		"src" : "../resources/views/**/*.php"
+	}
+}

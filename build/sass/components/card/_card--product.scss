@@ -1,0 +1,165 @@
+/* 
+	
+	components/card/_card--product.scss 
+
+*/
+
+.card--product {
+
+	.card--product__details {
+		@include clearfix;
+	}
+
+	.card--product__left {
+		float: left;
+		width: 60%;
+		box-sizing: border-box;
+		padding: 0 1.25em 0 0; 
+
+		h2 {
+			margin-top: 0;
+		}
+	}
+
+	.card--product__right {
+		float: left;
+		width: 40%;
+	}
+
+	.card--product__box {
+		@include clearfix;
+		background: $light-grey;
+		border-bottom: 1px solid $white;
+
+		.card--product__box-left {
+			float: left;
+			width: 50%;
+			padding: 0.5em;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 0.875em;
+		}
+
+		.card--product__box-right {
+			float: left;
+			width: 50%;
+			padding: 0.5em;
+			box-sizing: border-box;
+			font-size: 0.875em;
+		}
+
+		.card--product__box-price {
+			font-size: 1.5em;
+			font-weight: 700;
+			color: $orange;
+		}
+
+	}
+
+	.card--product__button {
+		text-align: right;
+		margin-top: 1.25em;
+
+		a.button {
+			margin-right: 0;
+			margin-left: 1em;
+		}
+	}
+
+	@media #{$tablet}{
+
+		.card--product__left {
+			width: 50%; 
+		}
+
+		.card--product__right {
+			width: 50%;
+		}
+
+	}
+
+	@media #{$mobile}{
+
+		.card--product__details {
+			.card--product__left,
+			.card--product__right {
+				width: 100%;
+			}
+		}
+
+		.card--product__button {
+			
+			a.button {
+				text-align: center;
+				display: block;
+				margin: 0 0 1.25em;
+			}
+
+			a.button:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+}
+
+
+.card--product-disabled {
+
+	.card--product__button {
+		a.disabled {
+			background: $mid-grey;
+		}
+	}
+
+	.card--product__details {
+		h2, p, div, .card--product__box-price {
+			color: $mid-grey;
+		}
+	}
+
+	.card--product__details .card--product__soldout {
+		display: inline-block;
+		background: $white;
+		padding: 0.5em;
+		color: $error-msg;
+		font-size: 0.875em;
+		font-weight: 700;
+		border: 2px solid $error-msg;
+		text-transform: uppercase;
+		
+	}
+
+	@media #{$mobile}{
+		.card--product__details .card--product__soldout {
+			margin-bottom: 1.5em;
+		}
+	}
+
+}
+
+.card--product-limited {
+
+	.card--product__details .card--product__limited {
+		display: inline-block;
+		background: $white;
+		padding: 0.5em;
+		color: $error-msg;
+		font-size: 0.875em;
+		font-weight: 700;
+		border: 2px solid $error-msg;
+		text-transform: uppercase;
+	}
+
+	@media #{$mobile}{
+		.card--product__details .card--product__limited {
+			margin-bottom: 1.5em;
+		}
+	}
+
+}
+
+

@@ -1,0 +1,84 @@
+/* 
+	
+	components/order/_order--details.scss
+
+*/
+
+.order--details {
+	margin-bottom: 1.25em;
+
+	.order--details__header {
+		border: 1px solid $brand3;
+		background: $brand4;
+		padding: 1em;
+	}
+
+	.order--details__eventname {
+		margin: 0;
+		font-size: 0.875em;
+		padding: 0.25em;
+		color: $brand2;
+
+		strong {
+			font-weight: bold;
+		}
+	}
+
+	.order--details__price {
+		margin: 0;
+		font-size: 0.875em;
+		color: $brand2;
+		padding: 0.25em;
+		text-align: right;
+	}
+
+	.order--details__status {
+		margin: 0;
+		font-size: 0.75em;
+		text-align: center;
+		border: 1px solid $brand3;
+		background: $brand4;
+		color: $brand2;
+		border-radius: 4px;
+		padding: 0.5em;
+		text-transform: uppercase;
+	}
+
+	.order--details__body {
+		border: 1px solid $brand3;
+		border-top: none;
+		background: lighten($brand4,5%);
+		padding: 1em;
+
+		.column__50:last-child {
+			text-align: right;
+		}
+
+		p {
+			margin: 0;
+			font-size: 0.75em;
+		}
+	}
+
+	&.successful {
+		.order--details__status {
+			border: 1px solid $status_green;
+			color: $status_green;
+		}
+	}
+
+	&.cancelled {
+
+		.order--details__eventname,
+		.order--details__price,
+		.order--details__status {
+			color: $brand3;
+		}
+
+	}
+
+}
+
+.order--update--details {
+	margin-bottom: 1.25em;
+}

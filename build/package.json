@@ -1,0 +1,50 @@
+{
+  "name": "ricoh-parking-website",
+  "version": "1.0.0",
+  "description": "Ricoh Parking Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Turner",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5"
+  },
+  "browser": {
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "jquery-validate": "./bower_components/jquery-validation/dist/jquery.validate.min.js",
+    "jquery-cookie": "./bower_components/js-cookie/src/js.cookie.js",
+    "modernizr": "./bower_components/modernizr-min/dist/modernizr.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "jquery-validate": {
+      "depends": [
+        "jquery"
+      ]
+    },
+    "jquery-cookie": {
+      "depends": [
+        "jquery"
+      ]
+    }
+  }
+}
