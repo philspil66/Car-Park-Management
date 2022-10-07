@@ -16,7 +16,7 @@ The business itself had no IT experience and had never managed a software develo
 
 So that was the problem, and it was a big problem!
 
-##My Solution
+## My Solution
 The first thing I did was to team up with another very experienced contractor whom I'd worked with before who I thought would relish this tall task so our two businesses joined forces for this one.
 
 The two vital things to resolve first was the data not being lost as paying customers had bought tickets so losing that data would have been a disaster, secondly it was getting to a point quickly to have a new platform in place so the selling of tickets was not interrupted if/when the existing ticketing platform went down.
@@ -41,7 +41,7 @@ What we did with a week to go was to build a mobile web application that could w
 
 Over the course of the next 12 weeks or so we built in most of the existing functionality and during that time the business was able to employ another permanent developer who was able to take over from us.
 
-##The Result
+## The Result
 The result was that the business was able to continue selling tickets for what turned out to be one of the biggest concerts in the UK that year as well as lots of other concerts like MTV Events, Rihanna and a number of football and rugby games. The business lost no customer data. The Bruce Springsteen even itself had 41,000 attendees and tickets were sold for all the on-site parking car-parks as well as a lot of external car-parks drafted in specially for the event. All the cars got in and out of the event quickly and the whole thing went very smoothly and more importantly, the business was able to keep in business and operating at all times.
 
 It was a very tough and demanding project but a lot of fun!
