@@ -1,4 +1,4 @@
-# car-park-management
+# Car Park Management Laravel Application
 
 There are always time's when projects go badly wrong and your Software System is hit by an unexpected curveball.
 
@@ -17,7 +17,8 @@ The business itself had no IT experience and had never managed a software develo
 So that was the problem, and it was a big problem!
 
 ## My Solution
-The first thing I did was to team up with another very experienced contractor whom I'd worked with before who I thought would relish this tall task so our two businesses joined forces for this one.
+
+The first thing I did was to team up with another very experienced developer whom I'd worked with before who I thought would relish this tall task.
 
 The two vital things to resolve first was the data not being lost as paying customers had bought tickets so losing that data would have been a disaster, secondly it was getting to a point quickly to have a new platform in place so the selling of tickets was not interrupted if/when the existing ticketing platform went down.
 
